@@ -8,6 +8,9 @@ type Candle @entity {
     id: ID! # time + period + srcToken + dstToken
     time: Int!
     period: Int!
+    token0: Bytes!
+    token1: Bytes!
+
     token0TotalAmount: BigInt!
     token1TotalAmount: BigInt!
     open: BigDecimal!
