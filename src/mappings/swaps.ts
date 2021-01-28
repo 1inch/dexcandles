@@ -53,6 +53,7 @@ export function handleSwap(event: Swap): void {
         }
 
         candle.close = price;
+        candle.lastBlock = event.block.number.toI32();
         candle.token0TotalAmount = candle.token0TotalAmount.plus(token0Amount);
         candle.token1TotalAmount = candle.token1TotalAmount.plus(token1Amount);
         candle.save();
